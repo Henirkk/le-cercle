@@ -27,7 +27,7 @@ $artists = array(
 .lc-artists-page .lc-feature-photo:has(img){background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,.45))}
 </style>
 <div class="lc-home lc-artists-page">
-  <header class="lc-header"><a class="lc-brand" href="<?php echo esc_url(home_url('/')); ?>"><span><img src="<?php echo esc_url($u.'/assets/images/brand/le-cercle-logo.png'); ?>" alt=""></span><b>Le Cercle</b></a><nav><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a><a href="<?php echo esc_url(home_url('/forum')); ?>">Forum</a><a class="active" href="<?php echo esc_url(home_url('/artistes')); ?>">Artistes</a><a href="<?php echo esc_url(home_url('/playlists')); ?>">Playlists</a><a href="<?php echo esc_url(home_url('/evenements')); ?>">Événements</a></nav><div class="lc-tools"><label>⌕ <input class="lc-artists-search" placeholder="Rechercher..."></label><a href="<?php echo esc_url(is_user_logged_in()?home_url('/profil'):home_url('/login')); ?>"><?php echo esc_html($initial); ?></a></div></header>
+<?php get_template_part('template-parts/site-header'); ?>
   <main class="lc-artists">
     <section class="lc-artists-intro"><div><span>↗ Découvrir</span><h1>Les voix qui font bouger la scène.</h1><p>Artistes établis, nouveaux visages et coups de cœur de la communauté Le Cercle.</p></div><div class="lc-artists-number"><b>06</b><span>artistes<br>à suivre</span></div></section>
     <section class="lc-artists-featured">

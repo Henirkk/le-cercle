@@ -14,7 +14,7 @@ $location   = $location ?: 'Bruxelles, Belgique';
 $avatar     = $is_member ? get_avatar_url($me->ID, array('size' => 160)) : $u . '/assets/images/figma/forum/rapfan92.png';
 ?>
 <div class="lc-home lc-profile-page">
-<header class="lc-header"><a class="lc-brand" href="<?php echo esc_url(home_url('/')); ?>"><span><img src="<?php echo esc_url($u.'/assets/images/brand/le-cercle-logo.png'); ?>" alt=""></span><b>Le Cercle</b></a><nav><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a><a href="<?php echo esc_url(home_url('/forum')); ?>">Forum</a><a href="<?php echo esc_url(home_url('/artistes')); ?>">Artistes</a><a href="<?php echo esc_url(home_url('/playlists')); ?>">Playlists</a><a href="<?php echo esc_url(home_url('/evenements')); ?>">Événements</a></nav><div class="lc-tools"><label>⌕ <input placeholder="Rechercher..."></label><a class="is-current" href="<?php echo esc_url($is_member ? home_url('/profil') : home_url('/login')); ?>"><?php echo esc_html($initial); ?></a></div></header>
+<?php get_template_part('template-parts/site-header'); ?>
 
 <main class="lc-profile">
   <section class="lc-profile-hero">

@@ -28,7 +28,7 @@ foreach ($created_topics as $created_topic) {
 $discussions = array_merge($created_discussions, $discussions);
 ?>
 <div class="lc-home lc-forum-page">
-<header class="lc-header"><a class="lc-brand" href="<?php echo esc_url(home_url('/')); ?>"><span><img src="<?php echo esc_url($u.'/assets/images/brand/le-cercle-logo.png'); ?>" alt=""></span><b>Le Cercle</b></a><nav><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a><a class="active" href="<?php echo esc_url(home_url('/forum')); ?>">Forum</a><a href="<?php echo esc_url(home_url('/artistes')); ?>">Artistes</a><a href="<?php echo esc_url(home_url('/playlists')); ?>">Playlists</a><a href="<?php echo esc_url(home_url('/evenements')); ?>">Événements</a></nav><div class="lc-tools"><label>⌕ <input class="lc-forum-search" placeholder="Rechercher..."></label><a href="<?php echo esc_url(is_user_logged_in()?home_url('/profil'):home_url('/login')); ?>"><?php echo esc_html($initial); ?></a></div></header>
+<?php get_template_part('template-parts/site-header'); ?>
 <main class="lc-forum">
   <section class="lc-forum-intro"><div><h1>Forum Le Cercle</h1><p>Échangez avec la communauté rap sur tous les sujets qui vous passionnent</p></div><button class="lc-new-topic" type="button">＋ Créer un sujet</button></section>
   <?php if (isset($_GET['topic']) && $_GET['topic'] === 'created') : ?><p class="lc-forum-notice">✓ Ton sujet est publié et visible dans les discussions récentes.</p><?php elseif (isset($_GET['topic']) && $_GET['topic'] === 'deleted') : ?><p class="lc-forum-notice">✓ Ton sujet a été supprimé.</p><?php elseif (isset($_GET['topic']) && $_GET['topic'] === 'error') : ?><p class="lc-forum-notice lc-forum-notice--error">Impossible de publier ou supprimer le sujet. Réessaie.</p><?php endif; ?>

@@ -30,7 +30,7 @@ $replies = array(
 );
 ?>
 <div class="lc-home lc-thread-page">
-<header class="lc-header"><a class="lc-brand" href="<?php echo esc_url(home_url('/')); ?>"><span><img src="<?php echo esc_url($u.'/assets/images/brand/le-cercle-logo.png'); ?>" alt=""></span><b>Le Cercle</b></a><nav><a href="<?php echo esc_url(home_url('/')); ?>">Accueil</a><a class="active" href="<?php echo esc_url(home_url('/forum')); ?>">Forum</a><a href="<?php echo esc_url(home_url('/artistes')); ?>">Artistes</a><a href="<?php echo esc_url(home_url('/playlists')); ?>">Playlists</a><a href="<?php echo esc_url(home_url('/evenements')); ?>">Événements</a></nav><div class="lc-tools"><label>⌕ <input placeholder="Rechercher..."></label><a href="<?php echo esc_url(is_user_logged_in()?home_url('/profil'):home_url('/login')); ?>"><?php echo esc_html($initial); ?></a></div></header>
+<?php get_template_part('template-parts/site-header'); ?>
 
 <main class="lc-thread">
   <nav class="lc-breadcrumb" aria-label="Fil d’Ariane"><a href="<?php echo esc_url(home_url('/forum')); ?>">Forum</a><span>›</span><a href="<?php echo esc_url(home_url('/forum')); ?>"><?php echo esc_html($topic[1]); ?></a><span>›</span><b>Sujet</b></nav>
